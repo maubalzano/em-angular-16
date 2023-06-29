@@ -1,0 +1,17 @@
+<div class="container p-4">
+    <h3>TODO List</h3>
+    <div class="d-flex flex-wrap">
+        <div class="card w-25 m-2" *ngFor="let todo of todos">
+            <div class="card-header d-flex justify-content-between">
+                <h5>{{todo.title}}</h5>
+                <input type="checkbox" [checked]="!todo.done" disabled>
+            </div>
+            <div class="card-body">
+                <p>{{todo.description}}</p>
+            </div>
+            <div class="card-footer text-end">
+                <a [routerLink]="'todos/'+ (todo.done ? 'done/' : 'open/') + todo.id">Go to TODO</a>
+            </div>
+        </div>
+    </div>
+</div>

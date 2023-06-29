@@ -1,0 +1,67 @@
+<div class="container">
+    <h3>Signals</h3>
+    <div class="d-flex">
+        <div class="col-6 pe-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="my-2">
+                        <div>
+                            <h4>Creare un Signal</h4>
+                            <img class="w-100" src="./../../../../../assets/images/create-signal.png">
+                            <!-- <code class="card p-3 bg-dark">
+                                <span>const <span class="text-primary">user</span> = <span class="text-warning">signal(<span class="text-info">this.user</span>);</span></span>
+                            </code> -->
+                        </div>
+                    </div>
+                    <div class="my-2">
+                        <div>
+                            <h4>Cambiare il valore di un Signal</h4>
+                            <img class="w-100" src="./../../../../../assets/images/change-value-signal.png">
+                            <!-- <code class="card p-4 bg-dark">
+                                <div class="my-3">
+                                    userSignal<span class="text-warning">.set(<span class="text-info">newUser</span>)</span><span class="text-success"> // Assegna un nuovo valore al signal</span>
+                                </div>
+                                <div class="my-3">
+                                    userSignal<span class="text-warning">.update(<span class="text-info">user => ({{'{'}}...user, name: newName{{'}'}}) </span>)</span><span class="text-success"> // Assegna un nuovo valore partendo dal valore precedente</span>
+                                </div>
+                                <div class="my-3">
+                                    userSignal<span class="text-warning">.mutate(<span class="text-info">user => user.name = newName</span>)</span><span class="text-success"> // Modifica il valore del signal "sul posto"</span>
+                                </div>
+                            </code> -->
+                        </div>
+                    </div>
+                    <div class="my-2">
+                        <div>
+                            <h4>Leggere il valore di un Signal</h4>
+                            <p>Possiamo leggere il valore di un signal tramite il suo getter: </p>
+                            <img class="w-100" src="./../../../../../assets/images/read-value-signal.png">
+                            <!-- <code class="card p-4 bg-dark">
+                                <div class="my-1">
+                                    const <span class="text-primary">userValue</span> = <span class="text-info">userSignal<span class="text-warning">()</span></span>
+                                </div>
+                            </code> -->
+                            <p>Oppure tramite le funzioni <b>effect()</b> e <b>computed()</b>: </p>
+                            <img class="w-100" src="./../../../../../assets/images/read-value-effect-signal.png">
+                            <img class="w-100" src="./../../../../../assets/images/read-value-computed-signal.png">
+                            <!-- <code class="card p-4 bg-dark">
+                                <div class="my-3 text-warning">
+                                    effect(<span class="text-info">() => {{'{'}}</span> <br>
+                                    <span class="mx-2"></span><span class="text-info">console.log(<span class="text-warning">userSignal()</span>)</span><br>
+                                        {{'}'}})
+                                    <span class="text-success">// La funzione viene eseguita ogni volta che userSignal() emette un nuovo valore.</span>
+                                </div>
+                                <div class="my-3">
+                                    const <span class="text-primary">userNameSignal</span><span class="text-success">: Signal</span> = <span class="text-warning">computed(<span class="text-primary">() => <span class="text-warning">userSignal()</span><span class="text-info">.name</span></span>)</span>
+                                    <span class="text-success"> // Crea un nuovo signal il cui valore dipende dal valore di un altro signal. Ogni volta che il valore di userSignal si aggiorna, la funzione computed viene esguita e aggiorna il valore di userNameSignal </span>
+                                </div>
+                            </code> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <app-parent changeDetection></app-parent>
+        </div>
+    </div>
+</div>

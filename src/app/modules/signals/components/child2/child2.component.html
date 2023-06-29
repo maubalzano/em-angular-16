@@ -1,0 +1,15 @@
+
+{{ changesDetected('Child Component 2') }}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5>Child 2</h5>
+        <code>ChangeDetectionStrategy.<b>OnPush</b></code>
+    </div>
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <span class="me-2">@Input() UserSignal:</span>
+            <code *ngIf="userSignal()">{{userSignal() | json}}</code>
+        </div>
+    </div>
+</div>

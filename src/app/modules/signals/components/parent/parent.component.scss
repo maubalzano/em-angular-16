@@ -1,0 +1,4 @@
+:host(.detected) > * {
+    border: solid 1px red;
+    transition: .5s
+}

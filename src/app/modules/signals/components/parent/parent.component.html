@@ -1,0 +1,27 @@
+
+{{ changesDetected('Parent Component') }}
+
+<div class="card">
+    <div class="card-header">
+        <h4>Parent Component</h4>
+    </div>
+    <div class="card-body">
+        <div class="form-group my-2" [formGroup]="formGroup">
+            <label>User Name</label>
+            <div class="input-group">
+                <input class="form-control" type="text" formControlName="userName">
+                <div class="input-group-append"><button (click)="changeName()" class="input-group-text btn border">Save</button></div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="me-2">User: </span>
+            <code>{{user | json}}</code>
+        </div>
+        <div class="my-4">
+            <app-child [user]="user" changeDetection></app-child>
+        </div>
+        <div class="my-4">
+            <app-child2 [userSignal]="userSignal" changeDetection></app-child2>
+        </div>
+    </div>
+</div>
